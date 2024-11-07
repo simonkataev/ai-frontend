@@ -1,0 +1,22 @@
+.dutify-input {
+  width: 100%;
+  border-radius: 8 / 16 * 1em;
+  border: 1px solid var(--neutral-stroke-color);
+  padding: 16 / 16 * 1em;
+  font-family: "Mona Sans";
+  font-size: 16 / 16 * 1em;
+  line-height: 18 / 16 * 1em;
+  letter-spacing: 2%;
+  color: var(--neutral-almost-black-color);
+  outline: solid 3px transparent;
+  transition: all 0.25s;
+}
+
+.dutify-input:focus {
+  outline: solid 3px var(--accents-trans-blue-color);
+  border-color: var(--accents-blue-color);
+}
+
+.dutify-input.error {
+  border-color: var(--other-red-error-color);
+}

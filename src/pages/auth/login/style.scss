@@ -1,0 +1,121 @@
+.login-container {
+  @apply flex justify-center items-center h-screen;
+
+  .wrapper {
+    border: 1px solid var(--other-purple-stroke-color);
+    box-shadow: var(--light-shadow);
+    border-radius: calc(8 / 16) * 1em;
+    margin: 16px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .splash {
+    width: calc(737 / 16) * 1em;
+  }
+  @media screen and (max-width: 1080px) {
+    .content {
+      padding: 24px !important;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .splash {
+      display: none;
+    }
+    .inputdata {
+      width: 100% !important;
+    }
+    .content {
+      padding: 36px !important;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .content {
+      padding: 24px !important;
+      min-height: 446px !important;
+    }
+    .inputdata {
+      gap: 24px !important;
+    }
+    .body {
+      gap: 24px !important;
+    }
+    .header {
+      gap: 24px !important;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: calc(72 / 16) * 1em;
+    min-height: calc(712 / 16) * 1em;
+
+    .body {
+      display: flex;
+      gap: 36px;
+      justify-content: center;
+      flex-direction: column;
+      .header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        .logo {
+          height: calc(23 / 16) * 1em;
+          margin: auto;
+        }
+        .welcome {
+          position: relative;
+          .welcome-container {
+            background-color: transparent;
+            h1 {
+              color: var(--neutral-almost-black-color);
+              margin-bottom: calc(-72 / 16) * 1rem;
+              user-select: none;
+              .overlay {
+                width: 50%;
+                height: calc(72 / 16) * 1rem;
+                mix-blend-mode: lighten;
+                filter: blur(16px);
+                transform: translateX(50%) translateY(-100%);
+                background-image: linear-gradient(
+                  25deg,
+                  #8061ff 0%,
+                  #e023ff 100%
+                );
+              }
+            }
+          }
+          span {
+            isolation: isolate;
+            user-select: none;
+          }
+        }
+      }
+
+      .inputdata {
+        isolation: isolate;
+        display: flex;
+        gap: 36px;
+        flex-direction: column;
+        max-width: calc(500 / 16) * 1em;
+        width: 33vw;
+        input {
+          width: 100%;
+        }
+        .password-input {
+          padding-right: calc(51 / 16) * 1em;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1vh;
+    }
+  }
+}

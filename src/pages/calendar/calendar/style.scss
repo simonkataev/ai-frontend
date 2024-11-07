@@ -1,0 +1,55 @@
+.calls-status {
+  padding: calc(6 / 16) * 1rem calc(12 / 16) * 1rem;
+  border-radius: calc(4 / 16) * 1rem;
+  text-transform: uppercase;
+}
+
+.calls-header {
+  margin-top: calc(96 / 16) * 1rem;
+  margin-bottom: calc(24 / 16) * 1rem;
+  color: var(--neutral-almost-black-color);
+}
+
+.call-datetime {
+  color: var(--neutral-body-text-color);
+}
+
+.call-title {
+  color: var(--neutral-almost-black-color);
+}
+
+.ant-collapse-header {
+  padding: 0;
+}
+
+.changed-task-label {
+  text-transform: uppercase;
+  color: var(--neutral-body-text-color);
+}
+
+.new-task-badge {
+  background-color: #8280ff27;
+  color: #8280FF;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 0.7rem;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tabActive {
+  border-radius: 4px;
+  background: #6C9EFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}

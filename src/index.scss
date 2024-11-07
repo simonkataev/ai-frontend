@@ -1,0 +1,341 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("./input.scss");
+
+:root {
+  --primary-color: #b979f9;
+  --inactive-color: #181c307a;
+
+  --neutral-white-color: white;
+  --neutral-almost-white-color: #fcfcfc;
+  --neutral-stroke-color: #e6e6e6;
+  --neutral-icons-color: #a9a9a9;
+  --neutral-body-text-color: #636363;
+  --neutral-almost-black-color: #0d0d0d;
+
+  --accents-purple-color: #8280ff;
+  --accents-trans-purple-color: #8280ff29;
+  --accents-blue-color: #6c9eff;
+  --accents-trans-blue-color: #6c9eff29;
+  --accents-pink-color: #ea6cff;
+  --accents-trans-pink-color: #ea6cff29;
+  --accents-orange-color: #ff8959;
+  --accents-trans-orange-color: #ff895929;
+
+  --other-dark-blue-color: #3b4163;
+  --other-trans-blue-color: #6c9eff29;
+  --other-purple-stroke-color: #ceceea;
+  --other-red-error-color: #ff3e3e;
+
+  --tags-green-color: #03a500;
+  --tags-trans-green-color: #03a50029;
+  --tags-blue-color: #0069c0;
+  --tags-trans-blue-color: #0069c029;
+
+  --gradients-main-color: linear-gradient(
+    to top right,
+    #009aff 0%,
+    #7100ff 25%,
+    #e200c0 50%,
+    #fa4800 100%
+  );
+  --gradients-purple-pink-color: linear-gradient(
+    to top right,
+    #7100ff 0%,
+    #e200c0 100%
+  );
+  --gradients-blue-purple-pink-color: linear-gradient(
+    to top right,
+    #009aff 0%,
+    #7100ff 45%,
+    #e200c0 100%
+  );
+  --gradients-pink-orange-color: linear-gradient(
+    to top right,
+    #e200c0 0%,
+    #fa4800 100%
+  );
+  --gradients-blue-purple-color: linear-gradient(
+    to top right,
+    #009aff 0%,
+    #5134ff 40%,
+    #7100ff 100%
+  );
+
+  --button-main-color: linear-gradient(
+    to right,
+    #009aff 0%,
+    #4e55ff 21%,
+    #7100ff 50%,
+    #e200c0 100%
+  );
+  --button-secondary-color: linear-gradient(to right, #7100ff 0%, #e200c0 100%);
+  --button-hover1-color: #6460ff;
+  --button-hover2-color: linear-gradient(
+    to right,
+    #009aff 0%,
+    #4e55ff 50%,
+    #7100ff 75%,
+    #e200c0 100%
+  );
+  --button-hover3-color: linear-gradient(to right, #7100ff 50%, #e200c0 100%);
+
+  --light-shadow: 0px 4px 24px 0px #9a9a9a14;
+  --medium-shadow: 4px 4px 24px 0px #9a9a9a3d;
+  --button-shadow: 0px 4px 16px 0px #00000014;
+}
+
+@font-face {
+  font-family: "Mona Sans";
+  src: url("../public/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("../public/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+
+html {
+  margin: 0;
+  font-family: "Mona Sans", "Inter";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+  font-size: 16px;
+  color: --var(--neutral-almost-black-color);
+}
+
+p {
+  color: var(--neutral-almost-black-color);
+}
+
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+// @media screen and (max-width: 1920px) {
+//   html {
+//     font-size: 16px;
+//   }
+// }
+
+// @media screen and (max-width: 1400px) {
+//   html {
+//     font-size: 13px;
+//   }
+// }
+
+// @media screen and (max-width: 1280px) {
+//   html {
+//     font-size: 12px;
+//   }
+// }
+
+// @media screen and (max-width: 980px) {
+//   html {
+//     font-size: 12px;
+//   }
+// }
+
+// @media screen and (max-width: 980px) {
+//   html {
+//     font-size: 12px;
+//   }
+// }
+
+.font-bold {
+  &-h1 {
+    font-family: "Mona Sans";
+    font-weight: bold;
+    font-size: calc(48 / 16) * 1rem;
+    line-height: calc(48 / 16) * 1rem;
+  }
+  &-h2 {
+    font-family: "Mona Sans";
+    font-weight: bold;
+    font-size: calc(24 / 16) * 1em;
+  }
+  &-h3 {
+    font-family: "Mona Sans";
+    font-weight: bold;
+    font-size: calc(16 / 16) * 1em;
+  }
+}
+
+.font-semibold {
+  &-btn {
+    &-large {
+      font-family: "Mona Sans";
+      font-weight: 400;
+      font-size: calc(18 / 16) * 1em;
+    }
+    &-big {
+      font-family: "Mona Sans";
+      font-weight: 400;
+      font-size: calc(16 / 16) * 1em;
+    }
+    &-medium {
+      font-family: "Mona Sans";
+      font-weight: 500;
+      font-size: calc(14 / 16) * 1rem;
+      line-height: calc(14 / 16) * 1rem;
+    }
+    &-small {
+      font-family: "Mona Sans";
+      font-weight: 400;
+      font-size: calc(12 / 16) * 1em;
+    }
+  }
+  &-hyperlink {
+    &-big {
+      font-family: "Mona Sans";
+      font-weight: 600;
+      font-size: calc(16 / 16) * 1em;
+      line-height: 110%;
+    }
+    &-small {
+      font-family: "Mona Sans";
+      font-weight: 600;
+      font-size: calc(12 / 16) * 1em;
+      line-height: 110%;
+    }
+  }
+}
+
+.font-medium {
+  &-capt {
+    &-large {
+      font-family: "Mona Sans";
+      font-weight: 500;
+      font-size: calc(18 / 16) * 1em;
+    }
+    &-big {
+      font-family: "Mona Sans";
+      font-size: calc(16 / 16) * 1em;
+      font-weight: 500;
+    }
+    &-medium {
+      font-family: "Mona Sans";
+      font-size: calc(14 / 16) * 1em;
+      font-weight: 500;
+    }
+    &-caps-medium {
+      font-family: "Mona Sans";
+      font-size: calc(14 / 16) * 1em;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 4%;
+    }
+    &-small {
+      font-family: "Mona Sans";
+      font-size: calc(12 / 16) * 1em;
+      line-height: 16px;
+    }
+    &-caps-small {
+      font-family: "Mona Sans";
+      font-size: calc(12 / 16) * 1em;
+      line-height: 11px;
+      letter-spacing: 4%;
+    }
+    &-extra-small {
+      font-family: "Mona Sans";
+      font-size: calc(9 / 16) * 1em;
+      line-height: calc(18 / 16) * 1em;
+      letter-spacing: 5%;
+    }
+  }
+}
+
+.font-regular {
+  &-large {
+    font-family: "Mona Sans";
+    font-size: calc(20 / 16) * 1em;
+    line-height: 110%;
+    letter-spacing: calc(0.4 / 16) * 1em;
+  }
+  &-big {
+    font-family: "Mona Sans";
+    font-size: calc(16 / 16) * 1em;
+    line-height: 110%;
+    letter-spacing: calc(0.4 / 16) * 1em;
+  }
+  &-medium {
+    font-family: "Mona Sans";
+    font-size: calc(14 / 16) * 1em;
+    line-height: 110%;
+    letter-spacing: 2%;
+  }
+  &-small {
+    font-family: "Mona Sans";
+    font-size: calc(12 / 16) * 1em;
+    line-height: 110%;
+    letter-spacing: 2%;
+  }
+}
+
+.normal-wrapper {
+  outline: 1px solid var(--neutral-stroke-color);
+  background-color: white;
+  padding-top: 1.6vh;
+  padding-bottom: 1.6vh;
+  border-radius: 2vh;
+  box-sizing: border-box;
+}
+
+/* width */
+.dutify-scroll::-webkit-scrollbar {
+  width: 0.8vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-icons-color);
+  border-radius: 1vh;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(270, 70%, 75%);
+}
+
+/* width */
+.thin::-webkit-scrollbar {
+  width: 3px;
+  z-index: 10;
+}
+
+/* Track */
+.thin::-webkit-scrollbar-track {
+  background-color: #e8e8e8;
+  border-radius: 2px;
+}
+
+/* Handle */
+.thin::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+.thin::-webkit-scrollbar-thumb:hover {
+  background: gray;
+}
+
+.dutify-scroll {
+  overflow-y: auto;
+  height: 100%;
+}

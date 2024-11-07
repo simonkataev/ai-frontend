@@ -1,0 +1,40 @@
+.changed-task-container {
+  margin-bottom: 1vh;
+}
+
+.changed-task-container .ant-card {
+  border: 1px solid #cbc9c9;
+}
+
+.task-new-bage {
+  text-align: center;
+  background-color: #e2ccfa;
+  width: 2.2vw;
+  border-radius: 0.4vh;
+}
+
+.panel-header-container {
+  display: flex;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  padding: 0;
+  display: flex;
+}
+
+.ant-collapse-item > .ant-collapse-header > .ant-collapse-expand-icon {
+  margin-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+}
+
+.ant-collapse-item-active > .ant-collapse-header > .ant-collapse-header-text {
+  color: #b979f9;
+}
+
+.ant-collapse-content-active {
+  border: none !important;
+}
+
+.ant-collapse-content-active > .ant-collapse-content-box {
+  background-color: white;
+}

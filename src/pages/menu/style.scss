@@ -1,0 +1,23 @@
+ul {
+  margin-top: calc(24 / 16) * 1em;
+  li {
+    padding-left: calc(84 / 16) * 1em;
+    padding-top: calc(12 / 16) * 1em;
+    padding-bottom: calc(12 / 16) * 1em;
+    display: flex;
+    gap: calc(12 / 16) * 1em;
+
+    display: flex;
+    cursor: pointer;
+    color: var(--other-dark-blue-color);
+    border-left: 5px solid transparent;
+    img {
+      width: calc(24 / 16) * 1em;
+    }
+  }
+  li.active {
+    color: var(--accents-blue-color);
+    background-color: var(--accents-trans-blue-color);
+    border-left: 5px solid var(--accents-blue-color);
+  }
+}

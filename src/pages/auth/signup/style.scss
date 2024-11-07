@@ -1,0 +1,125 @@
+.signup-container {
+  @apply flex justify-center items-center h-screen;
+
+  .wrapper {
+    border: 1px solid var(--other-purple-stroke-color);
+    box-shadow: var(--light-shadow);
+    border-radius: calc(8 / 16) * 1em;
+    overflow: hidden;
+    display: flex;
+    margin: 16px;
+  }
+  .splash {
+    width: calc(737 / 16) * 1em;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .content {
+      padding: 24px !important;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .splash {
+      display: none;
+    }
+    .inputData {
+      width: 100% !important;
+    }
+    .content {
+      padding: 36px !important;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .content {
+      padding: 24px !important;
+      min-height: 446px !important;
+    }
+    .inputData {
+      gap: 24px !important;
+    }
+    .body {
+      gap: 24px !important;
+    }
+    .header {
+      gap: 24px !important;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: calc(72 / 16) * 1em;
+    min-height: calc(829 / 16) * 1em;
+
+    .body {
+      display: flex;
+      gap: calc(36 / 16) * 1em;
+      justify-content: center;
+      flex-direction: column;
+
+      .header {
+        text-align: center;
+        .logo {
+          height: calc(23 / 16) * 1em;
+          margin: auto;
+        }
+        .welcome {
+          position: relative;
+          .welcome-container {
+            background-color: transparent;
+            h1 {
+              color: var(--neutral-almost-black-color);
+              margin-bottom: calc(-72 / 16) * 1rem;
+              user-select: none;
+              .overlay {
+                width: 30%;
+                height: calc(72 / 16) * 1rem;
+                mix-blend-mode: lighten;
+                filter: blur(16px);
+                transform: translateX(200%) translateY(-100%);
+                background-image: linear-gradient(
+                  -106deg,
+                  #e023ff 0%,
+                  #ff3434 100%
+                );
+              }
+            }
+          }
+          span {
+            isolation: isolate;
+            user-select: none;
+          }
+        }
+      }
+
+      .inputData {
+        isolation: isolate;
+        display: flex;
+        gap: calc(36 / 16) * 1em;
+        flex-direction: column;
+        max-width: calc(500 / 16) * 1em;
+        width: 33vw;
+        input {
+          width: 100%;
+        }
+        .password-input {
+          padding-right: calc(51 / 16) * 1em;
+        }
+      }
+      @media screen and (max-width: 480px) {
+        .inputData {
+          width: 100%;
+        }
+      }
+    }
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1vh;
+    }
+  }
+}

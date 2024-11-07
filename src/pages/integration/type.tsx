@@ -1,0 +1,5 @@
+export enum INTEGRATION_STATUS {
+  CONNECTED,
+  ACTIVE,
+  INACTIVE,
+}

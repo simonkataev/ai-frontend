@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+.app-root {
+  background-color: white; /* Light Purple color */
+  font-family: "Mona Sans";
+  min-height: 100vh;
+}
+
+.app-drawer {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.app-drawer .MuiPaper-root {
+  width: 250px;
+  background-color: #e6d6e9;
+}
+
+.app-content {
+  padding: 20px;
+  margin-left: 250px;
+}
+
+.status-badge {
+  height: 24px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  padding: 0 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.ant-collapse {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.ant-collapse > .ant-collapse-item {
+  background-color: white;
+}
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header {
+  align-items: center;
+}

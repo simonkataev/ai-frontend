@@ -1,0 +1,71 @@
+@import url("./dutify-input.scss");
+@import url("./dutify-check.scss");
+@import url("./dutify-button.scss");
+
+.input-control {
+  margin-bottom: 24 / 16 * 1em;
+  label {
+    display: block;
+    font-family: "Mona Sans";
+    font-size: 16 / 16 * 1em;
+    font-weight: 500;
+    margin-bottom: 12 / 16 * 1em;
+  }
+
+  .info {
+    font-family: "Mona Sans";
+    font-size: calc(12 / 16) * 1em;
+    margin-top: calc(12 / 16) * 1em;
+  }
+
+  .info.error {
+    color: var(--other-red-error-color);
+  }
+}
+
+.btn-visibility {
+  position: absolute;
+  right: 15 / 16 * 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 19 / 16 * 1em;
+  cursor: pointer;
+  user-select: none;
+  color: #616161;
+
+  img {
+    display: none;
+  }
+  img.active {
+    display: block;
+  }
+}
+
+.dutify-link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--accents-purple-color);
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 16 / 16 * 1em;
+  line-height: 110%;
+  display: inline;
+}
+
+.dutify-link:hover {
+  color: #a1a1a1;
+}
+
+.dutify-secondary-link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--other-dark-blue-color);
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: calc(18 / 16) * 1em;
+  display: inline;
+}
+
+.dutify-secondary-link:hover {
+  color: #3b4163;
+}
